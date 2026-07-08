@@ -1,0 +1,25 @@
+export const mockEvents = [
+  {
+    id: "ev_001",
+    title: "Evento de startups RZ",
+    description: "El encuentro de innovación más grande del año...",
+    eventType: "Destacado",
+    colorTheme: "#7C4DFF",
+    startDatetime: "2026-04-15T18:00:00",
+    modality: "Presencial",
+    location: "Auditorio Municipal Zapopan",
+    isFeatured: true,
+    imageUrl: "./img/evento_startups.png",
+  },
+  {
+    id: "ev_002",
+    title: "Cierre convocatoria · Movilidad urbana",
+    description: "Fecha límite para envío de propuestas.",
+    eventType: "Reto",
+    colorTheme: "#1E3A8A",
+    startDatetime: "2026-04-10T23:59:00",
+    modality: "Online",
+    location: null,
+    isFeatured: false,
+  },
+];

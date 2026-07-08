@@ -1,0 +1,30 @@
+export const mockMentors = [
+  {
+    id: "mt_001",
+    fullName: "Dra. Beatriz Solís",
+    roleType: "Mentor", // "Mentor" | "Tallerista" | "Aliado"
+    specialtyArea: "Innovación Educativa",
+    institution: "Universidad de Guadalajara",
+    bio: "",
+    expertiseTags: ["Liderazgo", "Estrategia", "Pitch Deck"],
+    availabilityDays: "Lunes y Jueves",
+    availabilityHours: "1 - 3 hrs",
+    sessionsCount: 48,
+    photoUrl: "img/perfil_generico_card.svg",
+    filterSpecialty: "SaaS",
+  },
+  {
+    id: "mt_002",
+    fullName: "Mtro. Ricardo Arceo",
+    roleType: "Aliado",
+    specialtyArea: "Alianzas Estratégicas",
+    institution: "Cámara de Comercio",
+    bio: "Especialista en networking y desarrollo de negocios B2B con más de 10 años de experiencia.",
+    expertiseTags: ["Networking", "B2B", "Scaling"],
+    availabilityDays: "Lunes y Jueves",
+    availabilityHours: "1 - 3 hrs",
+    sessionsCount: 48,
+    photoUrl: "img/perfil_generico_card.svg",
+    filterSpecialty: "Fintech",
+  },
+];
