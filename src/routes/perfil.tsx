@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Perfil from "@/pages/Perfil";
 
 export const Route = createFileRoute("/perfil")({
   head: () => ({
@@ -9,9 +10,5 @@ export const Route = createFileRoute("/perfil")({
       { property: "og:description", content: "Tu perfil en la comunidad RZ." },
     ],
   }),
-  component: PerfilPage,
+  component: Perfil,
 });
-
-function PerfilPage() {
-  return <h1 className="p-8 text-2xl font-semibold text-rz-ink">Perfil</h1>;
-}
