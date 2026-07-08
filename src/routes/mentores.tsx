@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Mentores from "../pages/Mentores.jsx";
 
 export const Route = createFileRoute("/mentores")({
   head: () => ({
@@ -9,9 +10,6 @@ export const Route = createFileRoute("/mentores")({
       { property: "og:description", content: "Encuentra mentores de la comunidad RZ." },
     ],
   }),
-  component: MentoresPage,
+  component: Mentores,
 });
 
-function MentoresPage() {
-  return <h1 className="p-8 text-2xl font-semibold text-rz-ink">Mentores</h1>;
-}
