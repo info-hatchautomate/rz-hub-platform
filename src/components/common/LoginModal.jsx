@@ -1,4 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
+import { useFakeAuth } from "@/lib/useFakeAuth";
 
 const LoginModalContext = createContext(null);
 
@@ -37,10 +39,14 @@ export default function LoginModal({ open, onClose }) {
     if (e.target === e.currentTarget) onClose?.();
   };
 
+  const { login } = useFakeAuth();
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Placeholder: no auth yet.
+    login();
     onClose?.();
+    navigate({ to: "/hub" });
   };
 
   return (
