@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useLoginModal } from "./LoginModal";
+import logoZapopan from "@/assets/logo-zapopan.png";
 
 const NAV_LINKS = [
   { to: "/alumni", label: "Alumni" },
@@ -16,6 +17,7 @@ export default function Navbar({ isLoggedIn = false }) {
     <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-[0_2px_20px_rgba(230,24,118,0.07)] transition-all duration-300">
       <div className="flex justify-between items-center px-6 lg:px-10 h-20 max-w-screen-xl mx-auto">
         <Link to="/" className="flex items-center gap-3">
+          <img src={logoZapopan} alt="Zapopan" className="h-11 w-auto" />
           <div className="w-px h-7 bg-slate-200" />
           <span className="text-lg font-black tracking-tighter text-slate-700">RZ Hub</span>
         </Link>

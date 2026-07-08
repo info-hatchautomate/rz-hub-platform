@@ -1,5 +1,6 @@
 import { styleFor } from "./roleStyles.js";
 import LockedTeaser from "../common/LockedTeaser.jsx";
+import { resolvePhoto } from "@/lib/assetFallbacks";
 
 /**
  * MentorCard — recibe `mentor` y `onViewProfile(mentor)`.
@@ -25,7 +26,7 @@ export default function MentorCard({ mentor, onViewProfile, locked = false, onUn
       <div className="h-48 overflow-hidden relative">
         <img
           alt={fullName}
-          src={photoUrl}
+          src={resolvePhoto(photoUrl)}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div

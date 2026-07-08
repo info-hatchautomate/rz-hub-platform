@@ -1,3 +1,5 @@
+import { resolveEventImage } from "@/lib/assetFallbacks";
+
 function formatDate(iso) {
   const d = new Date(iso);
   const months = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
@@ -21,13 +23,7 @@ export default function FeaturedEventHero({ event }) {
       />
       <div className="relative bg-white rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-12 items-center shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100">
         <div className="w-full md:w-[40%] aspect-[4/3] md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-slate-100">
-          {event.imageUrl ? (
-            <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center">
-              <span className="material-symbols-outlined text-slate-300 text-[8rem]">event</span>
-            </div>
-          )}
+          <img src={resolveEventImage(event.imageUrl)} alt={event.title} className="w-full h-full object-cover" />
         </div>
         <div className="flex-grow space-y-6">
           <div className="flex items-center gap-4">

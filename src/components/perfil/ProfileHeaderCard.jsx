@@ -1,6 +1,4 @@
-function initial(name = "?") {
-  return name.trim().charAt(0).toUpperCase();
-}
+import { genericoMujer } from "@/lib/assetFallbacks";
 
 export default function ProfileHeaderCard({ user }) {
   const { fullName, startup, memberSince } = user;
@@ -20,8 +18,8 @@ export default function ProfileHeaderCard({ user }) {
       <div className="px-8 pb-8 relative z-10">
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-4 mb-6">
           <div className="flex items-end gap-5">
-            <div className="w-28 h-28 rounded-[1.5rem] border-4 border-white shadow-xl bg-gradient-to-br from-primary to-primary-dim flex items-center justify-center text-white text-4xl font-black shrink-0 -mt-14 relative z-10">
-              {initial(fullName)}
+            <div className="w-28 h-28 rounded-[1.5rem] border-4 border-white shadow-xl overflow-hidden shrink-0 -mt-14 relative z-10 bg-slate-100">
+              <img src={user.avatarUrl || genericoMujer} alt={fullName} className="w-full h-full object-cover" />
             </div>
             <div className="pb-1">
               <h1 className="text-2xl font-black text-slate-800">{fullName}</h1>
