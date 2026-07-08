@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RecursosRouteImport } from './routes/recursos'
+import { Route as PerksRouteImport } from './routes/perks'
+import { Route as PerfilRouteImport } from './routes/perfil'
+import { Route as MentoresRouteImport } from './routes/mentores'
+import { Route as HubRouteImport } from './routes/hub'
+import { Route as CalendarioRouteImport } from './routes/calendario'
+import { Route as AlumniRouteImport } from './routes/alumni'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RecursosRoute = RecursosRouteImport.update({
+  id: '/recursos',
+  path: '/recursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerksRoute = PerksRouteImport.update({
+  id: '/perks',
+  path: '/perks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerfilRoute = PerfilRouteImport.update({
+  id: '/perfil',
+  path: '/perfil',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentoresRoute = MentoresRouteImport.update({
+  id: '/mentores',
+  path: '/mentores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HubRoute = HubRouteImport.update({
+  id: '/hub',
+  path: '/hub',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalendarioRoute = CalendarioRouteImport.update({
+  id: '/calendario',
+  path: '/calendario',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlumniRoute = AlumniRouteImport.update({
+  id: '/alumni',
+  path: '/alumni',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alumni': typeof AlumniRoute
+  '/calendario': typeof CalendarioRoute
+  '/hub': typeof HubRoute
+  '/mentores': typeof MentoresRoute
+  '/perfil': typeof PerfilRoute
+  '/perks': typeof PerksRoute
+  '/recursos': typeof RecursosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alumni': typeof AlumniRoute
+  '/calendario': typeof CalendarioRoute
+  '/hub': typeof HubRoute
+  '/mentores': typeof MentoresRoute
+  '/perfil': typeof PerfilRoute
+  '/perks': typeof PerksRoute
+  '/recursos': typeof RecursosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/alumni': typeof AlumniRoute
+  '/calendario': typeof CalendarioRoute
+  '/hub': typeof HubRoute
+  '/mentores': typeof MentoresRoute
+  '/perfil': typeof PerfilRoute
+  '/perks': typeof PerksRoute
+  '/recursos': typeof RecursosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/alumni'
+    | '/calendario'
+    | '/hub'
+    | '/mentores'
+    | '/perfil'
+    | '/perks'
+    | '/recursos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/alumni'
+    | '/calendario'
+    | '/hub'
+    | '/mentores'
+    | '/perfil'
+    | '/perks'
+    | '/recursos'
+  id:
+    | '__root__'
+    | '/'
+    | '/alumni'
+    | '/calendario'
+    | '/hub'
+    | '/mentores'
+    | '/perfil'
+    | '/perks'
+    | '/recursos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AlumniRoute: typeof AlumniRoute
+  CalendarioRoute: typeof CalendarioRoute
+  HubRoute: typeof HubRoute
+  MentoresRoute: typeof MentoresRoute
+  PerfilRoute: typeof PerfilRoute
+  PerksRoute: typeof PerksRoute
+  RecursosRoute: typeof RecursosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/recursos': {
+      id: '/recursos'
+      path: '/recursos'
+      fullPath: '/recursos'
+      preLoaderRoute: typeof RecursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perks': {
+      id: '/perks'
+      path: '/perks'
+      fullPath: '/perks'
+      preLoaderRoute: typeof PerksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/perfil': {
+      id: '/perfil'
+      path: '/perfil'
+      fullPath: '/perfil'
+      preLoaderRoute: typeof PerfilRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentores': {
+      id: '/mentores'
+      path: '/mentores'
+      fullPath: '/mentores'
+      preLoaderRoute: typeof MentoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hub': {
+      id: '/hub'
+      path: '/hub'
+      fullPath: '/hub'
+      preLoaderRoute: typeof HubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calendario': {
+      id: '/calendario'
+      path: '/calendario'
+      fullPath: '/calendario'
+      preLoaderRoute: typeof CalendarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/alumni': {
+      id: '/alumni'
+      path: '/alumni'
+      fullPath: '/alumni'
+      preLoaderRoute: typeof AlumniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +197,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AlumniRoute: AlumniRoute,
+  CalendarioRoute: CalendarioRoute,
+  HubRoute: HubRoute,
+  MentoresRoute: MentoresRoute,
+  PerfilRoute: PerfilRoute,
+  PerksRoute: PerksRoute,
+  RecursosRoute: RecursosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
