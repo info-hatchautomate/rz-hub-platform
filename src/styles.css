@@ -1,8 +1,19 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@import "@fontsource-variable/plus-jakarta-sans";
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-rz-primary: #E61876;
+  --color-rz-secondary: #1e40af;
+  --color-rz-surface: #F8FAFC;
+  --color-rz-surface-2: #E5E7EB;
+  --color-rz-ink: #1F2937;
+  --font-sans: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+}
+
 
 /*
  * Design system definition.
