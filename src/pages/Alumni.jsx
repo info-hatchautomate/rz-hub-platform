@@ -57,6 +57,15 @@ export default function Alumni() {
                 </span>
               </div>
             </div>
+                      <div class="hidden md:block w-1/3 aspect-square bg-white rounded-xl shadow-xl rotate-3 relative overflow-hidden group">
+                        <img alt="Entrepreneurs collaborating"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            data-alt="Dynamic group of diverse young entrepreneurs collaborating in a brightly lit modern coworking space with colorful murals in Zapopan"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt-S2lf8rdVwJf2Hv6gBf42i9jLv3vTOn1BKEPX8g4JWCZMJ7bal0ne9NO8YzAHH4R_nMSb_HdhkpA9L3wBM1vjCR-OC3fHXneYFjkw7GvJu_zE2X03SuERB1I6XhgSRYJwnsfC34huSJs9q1u8QR73MZHr99O0IdaaYFroo2B9km6r7KXppwtWOnlsZQ0-bnNHqVPSbnowie86bEVLii9n1jc4QGm3fNyRCRpQoWObYdjV6mI5P1i2V8At2VCFwyxYloMfxuhk2w_"
+                            // style=""
+                            />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+                    </div>
           </div>
         </div>
       </section>

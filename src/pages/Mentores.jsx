@@ -82,6 +82,15 @@ export default function Mentores() {
           <div className="flex-1 relative hidden md:block">
             <div className="w-full aspect-square rounded-3xl bg-secondary-container/30 relative overflow-hidden rotate-3 scale-95">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
+                                  {/* <div
+                        class="w-full aspect-square rounded-3xl bg-secondary-container/30 relative overflow-hidden rotate-3 scale-95"> */}
+                        <img alt="Collaborative meeting" class="w-full h-full object-cover"
+                            data-alt="Modern collaborative workspace with diverse group of professionals discussing strategy over coffee in bright sunlit architectural environment"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSxZiennag9Oll7OiOgltkq-2jgI9Zcij86GNa-_kb8y2vz2yXyBbDNbYhLHtAda0ojsXOz_spbIstLBvex8TYcVuCkJI5wVgYOW_8kHwK0IK0QAGHusfe74clFLWpw-lh_BKS9IB-pzto-RJESR4PXBoRkqSjmW3_X8i6nhOBsLQukX5Z6R1S8fMyNIM4oHslHsNAKD3jmGakVtECYJTPpyEkxo0VrH7OebJ5Zcta1AXGOv7l8pUlIS1qGya57C0Qph8xZFNnY8dB"
+                            // style=""
+                            />
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+                    {/* </div> */}
             </div>
             <div className="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl -rotate-6 hidden lg:block">
               <div className="flex items-center gap-4">

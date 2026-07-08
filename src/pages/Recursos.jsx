@@ -31,11 +31,15 @@ export default function Recursos() {
           </div>
           <div className="hidden lg:block relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-dim opacity-50 blur-3xl -z-10" />
-            <div className="rounded-3xl shadow-2xl rotate-3 border-8 border-white/10 backdrop-blur-xl bg-white/10 aspect-[4/3] flex items-center justify-center">
-              <span className="material-symbols-outlined text-white/60 text-[8rem]">
+            {/* <div className="rounded-3xl shadow-2xl rotate-3 border-8 border-white/10 backdrop-blur-xl bg-white/10 aspect-[4/3] flex items-center justify-center"> */}
+                <img alt="Collaboration" class="rounded-3xl shadow-2xl rotate-3 border-8 border-white/10 backdrop-blur-xl"
+            data-alt="Modern co-working space with large glass windows, people collaborating on digital whiteboards with vibrant sticky notes"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ZmBR_kXneCkGR-L_HyOzuZLUtKOroMdxQHGgJJkavtY2K53IRrK5ATp0bzCXFko3ruviv4S62SVYQJu6VEQdRbgdI2_F85OLWK3_mriyhPhwrF9oYV7QMN4H_9e_1FqjZeFTyaQ5iiNVPEwo42Ch8hF14Vhks1Mq9Etueca5rtNY9-JFnOjr3kK0IH__9fbvj9TMSSRzEk60Y2kM7wNXhMw39pDU9YqDkPhHABqTJBmZpf23DYBxwm94PczS1yGtG7Hm2Hilk8py" />
+              {/* <span className="material-symbols-outlined text-white/60 text-[8rem]">
                 library_books
-              </span>
-            </div>
+        
+              </span> */}
+            {/* </div> */}
           </div>
         </div>
       </section>
