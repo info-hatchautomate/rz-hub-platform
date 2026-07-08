@@ -1,3 +1,5 @@
+import LockedTeaser from "../common/LockedTeaser.jsx";
+
 const MONTHS = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
 
 function fmtDate(iso) {
