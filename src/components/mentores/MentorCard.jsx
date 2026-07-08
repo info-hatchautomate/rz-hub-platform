@@ -1,10 +1,12 @@
 import { styleFor } from "./roleStyles.js";
+import LockedTeaser from "../common/LockedTeaser.jsx";
 
 /**
  * MentorCard — recibe `mentor` y `onViewProfile(mentor)`.
  * Los colores del badge y del borde de hover dependen de `roleType`.
  */
-export default function MentorCard({ mentor, onViewProfile }) {
+export default function MentorCard({ mentor, onViewProfile, locked = false, onUnlock }) {
+  if (locked) return <LockedTeaser variant="mentor" onUnlock={onUnlock} />;
   const {
     fullName,
     roleType,
