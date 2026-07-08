@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Alumni from "../pages/Alumni.jsx";
 
 export const Route = createFileRoute("/alumni")({
   head: () => ({
@@ -9,9 +10,6 @@ export const Route = createFileRoute("/alumni")({
       { property: "og:description", content: "Directorio de alumni de la comunidad RZ." },
     ],
   }),
-  component: AlumniPage,
+  component: Alumni,
 });
 
-function AlumniPage() {
-  return <h1 className="p-8 text-2xl font-semibold text-rz-ink">Alumni</h1>;
-}
