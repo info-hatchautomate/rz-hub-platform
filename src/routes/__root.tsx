@@ -135,23 +135,17 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-rz-surface font-sans text-rz-ink">
-        <nav className="flex flex-wrap gap-4 border-b border-rz-surface-2 bg-white px-6 py-3 text-sm">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              activeOptions={{ exact: link.to === "/" }}
-              activeProps={{ className: "text-rz-primary font-semibold" }}
-              inactiveProps={{ className: "text-rz-ink/70 hover:text-rz-primary" }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <Outlet />
-      </div>
+      <LoginModalProvider>
+        <div className="min-h-screen bg-surface font-body text-on-surface flex flex-col">
+          <Navbar isLoggedIn={false} />
+          <main className="flex-1 pt-20">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+      </LoginModalProvider>
     </QueryClientProvider>
   );
 }
+
 
