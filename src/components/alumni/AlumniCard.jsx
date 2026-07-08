@@ -1,10 +1,12 @@
 import Badge from "../common/Badge.jsx";
+import LockedTeaser from "../common/LockedTeaser.jsx";
 
 /**
  * AlumniCard — tarjeta para el directorio de alumni egresados.
  * Recibe el objeto `alumnus` completo y un `onViewProfile(alumnus)` opcional.
  */
-export default function AlumniCard({ alumnus, onViewProfile }) {
+export default function AlumniCard({ alumnus, onViewProfile, locked = false, onUnlock }) {
+  if (locked) return <LockedTeaser variant="alumni" onUnlock={onUnlock} />;
   const {
     fullName,
     startupName,

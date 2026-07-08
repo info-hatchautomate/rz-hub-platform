@@ -23,7 +23,10 @@ function initials(name = "") {
     .toUpperCase();
 }
 
-export default function ResourceCard({ resource, onPreview }) {
+import LockedTeaser from "../common/LockedTeaser.jsx";
+
+export default function ResourceCard({ resource, onPreview, locked = false, onUnlock }) {
+  if (locked) return <LockedTeaser variant="resource" onUnlock={onUnlock} />;
   const style = categoryStyles[resource.category] || categoryStyles["Crecimiento"];
   const icon = formatIcons[resource.format] || "description";
   const isAlumni = resource.contributorType === "alumni";

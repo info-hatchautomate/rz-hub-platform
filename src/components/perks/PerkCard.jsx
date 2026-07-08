@@ -1,4 +1,7 @@
-export default function PerkCard({ perk, onOpen }) {
+import LockedTeaser from "../common/LockedTeaser.jsx";
+
+export default function PerkCard({ perk, onOpen, locked = false, onUnlock }) {
+  if (locked) return <LockedTeaser variant="perk" onUnlock={onUnlock} />;
   return (
     <div className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-all duration-300 relative group">
       <div className="space-y-4">
