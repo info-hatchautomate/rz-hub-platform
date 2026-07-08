@@ -1,0 +1,41 @@
+export const mockAlumni = [
+  {
+    id: "al_001",
+    fullName: "Valeria Mendoza",
+    startupName: "EcoLoop México",
+    tagline: "Nuestra misión es transformar la gestión de residuos en México a través de tecnología de economía circular.",
+    industry: "Sustentabilidad & Reciclaje",
+    industryIcon: "factory",
+    specialty: "Sustentabilidad",
+    stage: "Serie A",
+    programType: "Aceleración",
+    generationYear: 2023,
+    generationStatus: "egresado", // "egresado" | "en_curso"
+    badge: "GANADOR",             // "GANADOR" | "FINALISTA" | "PARTICIPANTE" | null
+    country: "México",
+    markets: "MX · USA · CA",
+    fundingRaised: "$450K USD",
+    jobsCreated: 12,
+    photoUrl: "img/perfil_generico_card.svg",
+  },
+  {
+    id: "al_002",
+    fullName: "Ricardo Salinas",
+    startupName: "SmartFarm Tech",
+    tagline: "",
+    industry: "Agrotecnología",
+    industryIcon: "agriculture",
+    specialty: "Agtech",
+    stage: "Pre-Seed",
+    programType: "Incubación",
+    generationYear: 2022,
+    generationStatus: "egresado",
+    badge: "FINALISTA",
+    country: "México",
+    markets: "MX · CL",
+    fundingRaised: "$280K USD",
+    jobsCreated: 8,
+    photoUrl: "img/perfil_generico_card.svg",
+  },
+  // ...resto de las 6 cards + los 4 de "generación actual" con generationStatus: "en_curso"
+];
