@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Calendario from "@/pages/Calendario";
 
 export const Route = createFileRoute("/calendario")({
   head: () => ({
@@ -9,9 +10,5 @@ export const Route = createFileRoute("/calendario")({
       { property: "og:description", content: "Eventos y calendario de la comunidad RZ." },
     ],
   }),
-  component: CalendarioPage,
+  component: Calendario,
 });
-
-function CalendarioPage() {
-  return <h1 className="p-8 text-2xl font-semibold text-rz-ink">Calendario</h1>;
-}
