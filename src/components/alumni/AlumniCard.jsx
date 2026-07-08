@@ -1,5 +1,6 @@
 import Badge from "../common/Badge.jsx";
 import LockedTeaser from "../common/LockedTeaser.jsx";
+import { resolvePhoto } from "@/lib/assetFallbacks";
 
 /**
  * AlumniCard — tarjeta para el directorio de alumni egresados.
@@ -23,7 +24,7 @@ export default function AlumniCard({ alumnus, onViewProfile, locked = false, onU
       <div className="relative h-48">
         <img
           alt={fullName}
-          src={photoUrl}
+          src={resolvePhoto(photoUrl)}
           className="w-full h-full object-cover"
         />
         {badge ? (
