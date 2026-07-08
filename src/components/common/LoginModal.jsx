@@ -24,6 +24,9 @@ export function useLoginModal() {
 }
 
 export default function LoginModal({ open, onClose }) {
+  const { login } = useFakeAuth();
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e) => {
@@ -38,9 +41,6 @@ export default function LoginModal({ open, onClose }) {
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) onClose?.();
   };
-
-  const { login } = useFakeAuth();
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
