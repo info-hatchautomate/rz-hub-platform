@@ -9,6 +9,7 @@ import PerkCard from "@/components/perks/PerkCard";
 import ResourceCard from "@/components/recursos/ResourceCard";
 import EventTimelineItem from "@/components/calendario/EventTimelineItem";
 import { useLoginModal } from "@/components/common/LoginModal";
+import { stockVideoUrl } from "@/lib/assetFallbacks";
 
 function SectionEyebrow({ children, tone = "primary" }) {
   const tones = {
@@ -65,8 +66,16 @@ export default function Landing() {
               </a>
             </div>
           </div>
-          <div className="hidden lg:block relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-primary to-primary-dim shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,white_1px,transparent_1px)] [background-size:24px_24px] opacity-20" />
+          <div className="hidden lg:block relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-900 shadow-2xl">
+            <video
+              src={stockVideoUrl}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
             <div className="absolute bottom-8 left-8 right-8 text-white">
               <div className="text-6xl font-black">+120</div>
               <div className="uppercase text-sm tracking-widest font-bold opacity-80">
