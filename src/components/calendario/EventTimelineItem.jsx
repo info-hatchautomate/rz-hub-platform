@@ -24,7 +24,10 @@ function metaLabel(event) {
   return fmtTime(event.startDatetime);
 }
 
-export default function EventTimelineItem({ event, statusLabel = "Próximamente" }) {
+import LockedTeaserForEvent from "../common/LockedTeaser.jsx";
+
+export default function EventTimelineItem({ event, statusLabel = "Próximamente", locked = false, onUnlock }) {
+  if (locked) return <LockedTeaserForEvent variant="event" onUnlock={onUnlock} />;
   const { day, month } = fmtDate(event.startDatetime);
   const color = event.colorTheme || "#1e40af";
 
