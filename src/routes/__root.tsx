@@ -122,16 +122,6 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-const NAV_LINKS = [
-  { to: "/", label: "Landing" },
-  { to: "/hub", label: "Hub" },
-  { to: "/alumni", label: "Alumni" },
-  { to: "/mentores", label: "Mentores" },
-  { to: "/perks", label: "Perks" },
-  { to: "/recursos", label: "Recursos" },
-  { to: "/calendario", label: "Calendario" },
-  { to: "/perfil", label: "Perfil" },
-] as const;
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
