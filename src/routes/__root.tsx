@@ -130,7 +130,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <LoginModalProvider>
         <div className="min-h-screen bg-surface font-body text-on-surface flex flex-col">
-          <Navbar isLoggedIn={false} />
+          <Navbar />
           <main className="flex-1 pt-20">
             <Outlet />
           </main>
