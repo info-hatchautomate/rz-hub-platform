@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Hub from "@/pages/Hub";
 
 export const Route = createFileRoute("/hub")({
   head: () => ({
@@ -9,9 +10,5 @@ export const Route = createFileRoute("/hub")({
       { property: "og:description", content: "Tu punto de encuentro con la comunidad RZ." },
     ],
   }),
-  component: HubPage,
+  component: Hub,
 });
-
-function HubPage() {
-  return <h1 className="p-8 text-2xl font-semibold text-rz-ink">Hub</h1>;
-}
