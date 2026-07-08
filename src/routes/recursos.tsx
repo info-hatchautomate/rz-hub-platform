@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Recursos from "@/pages/Recursos";
 
 export const Route = createFileRoute("/recursos")({
   head: () => ({
@@ -9,9 +10,5 @@ export const Route = createFileRoute("/recursos")({
       { property: "og:description", content: "Biblioteca de recursos de la comunidad RZ." },
     ],
   }),
-  component: RecursosPage,
+  component: Recursos,
 });
-
-function RecursosPage() {
-  return <h1 className="p-8 text-2xl font-semibold text-rz-ink">Recursos</h1>;
-}
