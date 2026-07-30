@@ -55,7 +55,7 @@ export default function Hub() {
             Bienvenido de nuevo
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-[1.05]">
-            Hola, {user.fullName.split(" ")[0]} 👋
+            Hola, {user.fullName.split(" ")[0]}
           </h1>
           <p className="text-xl opacity-90 max-w-2xl mb-8">
             Este es tu Hub. Explora la red, activa beneficios y encuentra los recursos que necesitas

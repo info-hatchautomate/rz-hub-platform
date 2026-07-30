@@ -66,7 +66,7 @@ export default function EventRow({ event, variant = "upcoming" }) {
       <span
         className={`text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shrink-0 ${statusClass}`}
       >
-        {isConfirmed ? "✅ " : ""}
+        {isConfirmed ? "" : ""}
         {event.registrationStatus || "Registrado"}
       </span>
     </div>

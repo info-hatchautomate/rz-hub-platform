@@ -1,8 +1,8 @@
 const FILTERS = [
   { value: "Todos", label: "Todos" },
-  { value: "Validación", label: "🔍 Validación" },
-  { value: "Crecimiento", label: "🚀 Crecimiento" },
-  { value: "Escalamiento", label: "📈 Escalamiento" },
+  { value: "Validación", label: "Validación" },
+  { value: "Crecimiento", label: "Crecimiento" },
+  { value: "Escalamiento", label: "Escalamiento" },
 ];
 
 export default function ResourceFilters({ active, onChange }) {

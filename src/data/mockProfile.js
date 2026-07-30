@@ -8,7 +8,7 @@ export const mockCurrentUser = {
   startup: {
     name: "UrbanRoots",
     tagline: "Emprendedora social enfocada en agricultura urbana...",
-    sectorTags: ["🌱 AgriTech", "🌍 Social Impact", "💰 Fundraising", "🤝 B2B"],
+    sectorTags: ["AgriTech", "Social Impact", "Fundraising", "B2B"],
     stage: "Pre-Seed", // Idea | Validación | Pre-Seed | Serie A
     stageProgressPercent: 40,
     generationYear: 2024,
@@ -20,7 +20,7 @@ export const mockCurrentUser = {
     { perkId: "legal", label: "Asesoría Legal", detail: "1 sesión gratis · Activado May 12", activatedAt: "2026-05-12" },
   ],
   recognition: {
-    emoji: "🏆",
+    emoji: "",
     title: "Top Contribuidora",
     subtitle: "Generación 2024",
     description: "Reconocida por aportar los 3 recursos más descargados de la comunidad en 2024.",

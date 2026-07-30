@@ -1,7 +1,7 @@
 const categoryStyles = {
-  "Validación": { pill: "bg-warning-container text-on-warning-container", emoji: "🔍" },
-  "Crecimiento": { pill: "bg-secondary-container text-on-secondary-container", emoji: "🚀" },
-  "Escalamiento": { pill: "bg-purple-100 text-purple-700", emoji: "📈" },
+  "Validación": { pill: "bg-warning-container text-on-warning-container", emoji: "" },
+  "Crecimiento": { pill: "bg-secondary-container text-on-secondary-container", emoji: "" },
+  "Escalamiento": { pill: "bg-purple-100 text-purple-700", emoji: "" },
 };
 
 const formatIcons = {
