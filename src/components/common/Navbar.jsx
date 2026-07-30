@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useLoginModal } from "./LoginModal";
 import { useFakeAuth } from "@/lib/useFakeAuth";
 import logoZapopan from "@/assets/logo-zapopan.png";
@@ -19,7 +19,7 @@ export default function Navbar() {
 
   const handleLogout = () => {
     logout();
-    navigate({ to: "/" });
+    navigate("/");
   };
 
   return (
@@ -33,15 +33,18 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-7 font-semibold text-sm">
           {NAV_LINKS.map((link) => (
-            <Link
+            <NavLink
               key={link.to}
               to={link.to}
-              className="text-slate-600 transition-colors hover:text-primary"
-              activeProps={{ className: "text-primary" }}
-              activeOptions={link.exact ? { exact: true } : undefined}
+              end={link.exact}
+              className={({ isActive }) =>
+                `transition-colors hover:text-primary ${
+                  isActive ? "text-primary" : "text-slate-600"
+                }`
+              }
             >
               {link.label}
-            </Link>
+            </NavLink>
           ))}
         </div>
 

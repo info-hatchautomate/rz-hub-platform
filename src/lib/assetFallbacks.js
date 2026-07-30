@@ -2,10 +2,10 @@ import perfilGenerico from "@/assets/perfil-generico.svg";
 import genericoHombre from "@/assets/generico-hombre.png";
 import genericoMujer from "@/assets/generico-mujer.png";
 import eventoStartups from "@/assets/evento-startups.png";
-import stockVideo from "@/assets/stock-video.mp4.asset.json";
+import stockVideo from "@/assets/stock-video.mp4";
 
 export { perfilGenerico, genericoHombre, genericoMujer, eventoStartups };
-export const stockVideoUrl = stockVideo.url;
+export const stockVideoUrl = stockVideo;
 
 const PLACEHOLDER_PHOTO_RE = /perfil_generico_card|placeholder/i;
 const PLACEHOLDER_EVENT_RE = /evento_startups/i;

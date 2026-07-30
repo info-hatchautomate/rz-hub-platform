@@ -90,7 +90,7 @@ export default function Landing() {
       <Section id="alumni" eyebrow="Red Alumni" title="Nuestros egresados" tone="primary">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {alumniTeasers.map((a) => (
-            <AlumniCard key={a.id} alumnus={a} locked onUnlock={unlock} />
+            <AlumniCard key={a.id} alumnus={a}  onUnlock={unlock} />
           ))}
         </div>
       </Section>
@@ -99,7 +99,7 @@ export default function Landing() {
       <Section eyebrow="Mentores & Aliados" title="Aprende de los mejores" tone="secondary">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {mentorTeasers.map((m) => (
-            <MentorCard key={m.id} mentor={m} locked onUnlock={unlock} />
+            <MentorCard key={m.id} mentor={m}  onUnlock={unlock} />
           ))}
         </div>
       </Section>
@@ -116,7 +116,7 @@ export default function Landing() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {perkTeasers.map((p) => (
-              <PerkCard key={p.id} perk={p} locked onUnlock={unlock} />
+              <PerkCard key={p.id} perk={p}  onUnlock={unlock} />
             ))}
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Landing() {
       <Section eyebrow="Biblioteca" title="Recursos para emprender" tone="green">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {resourceTeasers.map((r) => (
-            <ResourceCard key={r.id} resource={r} locked onUnlock={unlock} />
+            <ResourceCard key={r.id} resource={r}  onUnlock={unlock} />
           ))}
         </div>
       </Section>
@@ -135,7 +135,7 @@ export default function Landing() {
       <Section eyebrow="Calendario" title="Próximos eventos" tone="secondary">
         <div className="space-y-4">
           {eventTeasers.map((e) => (
-            <EventTimelineItem key={e.id} event={e} locked onUnlock={unlock} />
+            <EventTimelineItem key={e.id} event={e}  onUnlock={unlock} />
           ))}
         </div>
       </Section>
