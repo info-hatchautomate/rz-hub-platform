@@ -13,6 +13,8 @@ import Mentores from "./pages/Mentores.jsx";
 import Perfil from "./pages/Perfil.jsx";
 import Perks from "./pages/Perks.jsx";
 import Recursos from "./pages/Recursos.jsx";
+import { HashRouter } from "react-router-dom";
+
 
 const queryClient = new QueryClient();
 
@@ -20,7 +22,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <LoginModalProvider>
-        <BrowserRouter>
+        <HashRouter>
           <div className="min-h-screen bg-surface font-body text-on-surface flex flex-col">
             <Navbar />
 
@@ -39,7 +41,7 @@ export default function App() {
 
             <Footer />
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </LoginModalProvider>
     </QueryClientProvider>
   );
